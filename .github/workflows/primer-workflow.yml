@@ -1,0 +1,8 @@
+name: Mi primer workflow
+on: [push]
+
+jobs: 
+  saludo:
+    runs-on: ubuntu-latest
+    steps: 
+      - run: echo "Hola Github Actions"
