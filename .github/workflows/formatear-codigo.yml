@@ -1,0 +1,16 @@
+name: Formatear codigo
+on: [push]
+
+jobs:
+  formatear-codigo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Installar Node.js 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Installar Prettier
+        run: npm install -g Prettier
+      - name: Comprobar formato
+        run: prettier . --check
