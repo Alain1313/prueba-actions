@@ -1,4 +1,4 @@
-name: Formatear codigo
+name: Formatear codigo Prettier
 on: [push]
 
 jobs:
