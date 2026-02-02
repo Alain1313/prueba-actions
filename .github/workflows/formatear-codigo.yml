@@ -11,6 +11,6 @@ jobs:
         with:
           node-version: 20
       - name: Installar Prettier
-        run: npm install -g Prettier
+        run: npm install -g prettier
       - name: Comprobar formato
         run: prettier . --check
