@@ -2,7 +2,7 @@ name: Comandos linux
 on:
   push:
   paths:
-    /"scripts/**"
+    - "scripts/**"
 jobs:
   comandos:
   runs-on: ubuntu-latest
