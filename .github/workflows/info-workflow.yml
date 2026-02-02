@@ -1,0 +1,25 @@
+name: Repository-info
+on: [push]
+
+jobs: 
+  mostrar-info:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Mostrar informacion basica del repositorio
+        run: |
+            echo "Repositorio: ${{ github.repository }}"
+            echo "Workflow: ${{ github.workflow }}"
+            echo "Usuario que hizo push/PR: ${{ github.actor }}"
+            echo "Evento que disparó el workflow: ${{ github.event_name }}"
+        
+      - name: Mostrar información de la rama y commits
+        run: |
+          echo "Rama actual: ${{ github.ref_name }}"
+          echo "SHA del commit: ${{ github.sha }}"
+          echo "Número de ejecución: ${{ github.run_number }}"
+          echo "ID único de ejecución: ${{ github.run_id }}"
+        
+      - name: Información de Pull Request (si aplica)
+        run: |
+          echo "Rama head (PR): ${{ github.head_ref }}"
+          echo "Rama base (PR): ${{ github.base_ref }}"
