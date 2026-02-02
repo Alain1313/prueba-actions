@@ -7,10 +7,10 @@ jobs:
     steps: 
       - name: Mostrar informacion basica del repositorio
         run: |
-            echo "Repositorio: ${{ github.repository }}"
-            echo "Workflow: ${{ github.workflow }}"
-            echo "Usuario que hizo push/PR: ${{ github.actor }}"
-            echo "Evento que disparó el workflow: ${{ github.event_name }}"
+          echo "Repositorio: ${{ github.repository }}"
+          echo "Workflow: ${{ github.workflow }}"
+          echo "Usuario que hizo push/PR: ${{ github.actor }}"
+          echo "Evento que disparó el workflow: ${{ github.event_name }}"
         
       - name: Mostrar información de la rama y commits
         run: |
